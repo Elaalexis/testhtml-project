@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ay's Valentine Lover's Concept - Celebrating Love Every Day</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Cormorant+Garamond:wght@300;400;600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-pink: #FF6B9D;
+            --coral: #FF8C69;
+            --peach: #FFB4A2;
+            --lavender: #B8A1D6;
+            --mint: #9FE2BF;
+            --sunshine: #FFD93D;
+            --deep-green: #2F5233;
+            --soft-white: #FFF8F3;
+            --cream: #FFF5E7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: var(--deep-green);
+            background: var(--soft-white);
+            overflow-x: hidden;
+        }
+
+        /* Decorative Background Elements */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--peach) 0%, transparent 70%);
+            opacity: 0.3;
+            z-index: -1;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: -30%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--lavender) 0%, transparent 70%);
+            opacity: 0.3;
+            z-index: -1;
+            animation: float 25s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(10deg); }
+            66% { transform: translate(-20px, 20px) rotate(-10deg); }
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--soft-white) 50%, #FFF0E6 100%);
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            max-width: 1000px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .business-name {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 8vw, 7rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary-pink), var(--coral), var(--sunshine));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            letter-spacing: -2px;
+            line-height: 1.1;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            color: var(--deep-green);
+            font-weight: 300;
+            font-style: italic;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .hero-images {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .hero-image {
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(255, 107, 157, 0.3);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .hero-image:hover {
+            transform: translateY(-10px) rotate(2deg);
+            box-shadow: 0 30px 80px rgba(255, 107, 157, 0.4);
+        }
+
+        /* Decorative Flowers */
+        .floating-flower {
+            position: absolute;
+            font-size: 3rem;
+            opacity: 0.2;
+            animation: floatFlower 15s ease-in-out infinite;
+        }
+
+        .floating-flower:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+        .floating-flower:nth-child(2) { top: 20%; right: 15%; animation-delay: 3s; }
+        .floating-flower:nth-child(3) { bottom: 15%; left: 20%; animation-delay: 6s; }
+        .floating-flower:nth-child(4) { bottom: 25%; right: 10%; animation-delay: 9s; }
+
+        @keyframes floatFlower {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--deep-green);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '✿';
+            display: block;
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-pink);
+            margin-top: 1rem;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+            border-radius: 30px;
+            padding: 5rem 3rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: var(--deep-green);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text strong {
+            color: var(--primary-pink);
+            font-weight: 600;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .vision-mission {
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .vm-card {
+            background: linear-gradient(135deg, var(--peach), var(--primary-pink));
+            padding: 2.5rem;
+            border-radius: 20px;
+            color: white;
+        }
+
+        .vm-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .vm-card p {
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Bouquet Categories Section */
+        .bouquets {
+            background: var(--cream);
+            padding: 6rem 2rem;
+        }
+
+        .bouquet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .bouquet-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+        }
+
+        .bouquet-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 70px rgba(255, 107, 157, 0.3);
+        }
+
+        .bouquet-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .bouquet-info {
+            padding: 2rem;
+        }
+
+        .bouquet-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--deep-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .bouquet-description {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .bouquet-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-pink);
+        }
+
+        .price-tag {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--sunshine);
+            color: var(--deep-green);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--deep-green), #1a3a1f);
+            color: white;
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--sunshine);
+        }
+
+        .footer-section p, .footer-section a {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-pink);
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--primary-pink);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: transform 0.3s ease, background 0.3s ease;
+            font-weight: 600;
+        }
+
+        .contact-link:hover {
+            background: var(--coral);
+            transform: scale(1.05);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .vision-mission {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-images {
+                gap: 1rem;
+            }
+
+            .hero-image {
+                width: 150px;
+                height: 180px;
+            }
+
+            .floating-flower {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            .about {
+                padding: 3rem 2rem;
+            }
+
+            .bouquet-grid {
+                gap: 2rem;
+            }
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: linear-gradient(135deg, var(--primary-pink), var(--coral));
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 2rem;
+            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 107, 157, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Decorative Flowers -->
+    <div class="floating-flower">🌸</div>
+    <div class="floating-flower">🌺</div>
+    <div class="floating-flower">🌷</div>
+    <div class="floating-flower">🌹</div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="business-name">Ay's Valentine Lover's Concept</h1>
+            <p class="tagline">Celebrating Love, One Bloom at a Time</p>
+            <div class="hero-images">
+                <img src="https://images.unsplash.com/photo-1487070183336-b863922373d4?w=400&h=500&fit=crop" alt="Beautiful flower arrangement" class="hero-image">
+                <img src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?w=400&h=500&fit=crop" alt="Vibrant bouquet" class="hero-image">
+                <img src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?w=400&h=500&fit=crop" alt="Elegant roses" class="hero-image">
+            </div>
+            <a href="#contact" class="cta-button">Order Your Perfect Bouquet</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="section-title">The Love Story of Valentine & Flowers</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>The tradition of giving flowers on Valentine's Day dates back to ancient Rome, where <strong>Saint Valentine</strong> defied Emperor Claudius II by secretly performing marriages for young lovers. Legend has it that before his execution, Valentine sent the first "valentine" greeting to his beloved, signing it "From your Valentine" - a phrase still used today.</p>
+                <p>Flowers, especially roses, became symbols of this eternal love story. The red rose, gifted by lovers throughout history, represents deep passion and devotion. At <strong>Ay's Valentine Lover's Concept</strong>, we honor this timeless tradition by ensuring every bouquet carries the same spirit of romance, sacrifice, and undying love that Valentine himself embodied.</p>
+                <p>But love isn't confined to just one day! We believe that <strong>every day is an opportunity to celebrate love</strong> - whether it's romantic love, family bonds, friendship, or self-love. From Lagos to every corner of Western Nigeria, we deliver fresh blooms that speak the universal language of affection.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&h=600&fit=crop" alt="Fresh flower arrangement" class="about-image">
+        </div>
+
+        <div class="vision-mission">
+            <div class="vm-card">
+                <h3>Our Vision</h3>
+                <p>To keep the spirit of Valentine alive every single day, making Western Nigeria the region where love blooms eternally through the beauty of fresh flowers and heartfelt gestures.</p>
+            </div>
+            <div class="vm-card">
+                <h3>Our Mission</h3>
+                <p>To honor Saint Valentine's legacy by helping you express love in its purest form - through the timeless gift of flowers. We craft each bouquet with the same passion and dedication that inspired the first valentines centuries ago.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bouquet Categories Section -->
+    <section class="bouquets" id="bouquets">
+        <h2 class="section-title">Our Signature Collections</h2>
+        <div class="bouquet-grid">
+            <div class="bouquet-card">
+                <div class="price-tag">₦15,000</div>
+                <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=600&h=600&fit=crop" alt="Classic Romance Bouquet" class="bouquet-image">
+                <div class="bouquet-info">
+                    <h3 class="bouquet-name">Classic Romance</h3>
+                    <p class="bouquet-description">Stunning red roses arranged in elegant harmony. Perfect for expressing deep love and admiration. Includes 12 premium long-stem roses with lush greenery.</p>
+                </div>
+            </div>
+
+            <div class="bouquet-card">
+                <div class="price-tag">₦12,500</div>
+                <img src="https://images.unsplash.com/photo-1535532423566-3e2fb76b8d8f?w=600&h=600&fit=crop" alt="Sunshine Delight Bouquet" class="bouquet-image">
+                <div class="bouquet-info">
+                    <h3 class="bouquet-name">Sunshine Delight</h3>
+                    <p class="bouquet-description">Bright yellow and orange blooms that radiate warmth and happiness. Featuring sunflowers, gerberas, and vibrant accent flowers.</p>
+                </div>
+            </div>
+
+            <div class="bouquet-card">
+                <div class="price-tag">₦18,000</div>
+                <img src="https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?w=600&h=600&fit=crop" alt="Garden Paradise Bouquet" class="bouquet-image">
+                <div class="bouquet-info">
+                    <h3 class="bouquet-name">Garden Paradise</h3>
+                    <p class="bouquet-description">A luxurious mix of premium blooms including roses, lilies, and exotic flowers. Our most lavish arrangement for special celebrations.</p>
+                </div>
+            </div>
+
+            <div class="bouquet-card">
+                <div class="price-tag">₦10,000</div>
+                <img src="https://images.unsplash.com/photo-1496062031456-07b8f162a322?w=600&h=600&fit=crop" alt="Pastel Dream Bouquet" class="bouquet-image">
+                <div class="bouquet-info">
+                    <h3 class="bouquet-name">Pastel Dreams</h3>
+                    <p class="bouquet-description">Soft pink, lavender, and white flowers creating an ethereal, romantic feel. Perfect for birthdays, anniversaries, or just because.</p>
+                </div>
+            </div>
+
+            <div class="bouquet-card">
+                <div class="price-tag">₦14,000</div>
+                <img src="https://images.unsplash.com/photo-1589824783331-bee0e7cbf0cb?w=600&h=600&fit=crop" alt="Tropical Vibes Bouquet" class="bouquet-image">
+                <div class="bouquet-info">
+                    <h3 class="bouquet-name">Tropical Vibes</h3>
+                    <p class="bouquet-description">Exotic tropical flowers in vibrant colors that bring the paradise to your doorstep. Includes birds of paradise and other stunning tropicals.</p>
+                </div>
+            </div>
+
+            <div class="bouquet-card">
+                <div class="price-tag">₦11,500</div>
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=600&fit=crop" alt="Elegant Whites Bouquet" class="bouquet-image">
+                <div class="bouquet-info">
+                    <h3 class="bouquet-name">Elegant Whites</h3>
+                    <p class="bouquet-description">Pure white roses and lilies symbolizing purity and grace. Ideal for weddings, condolences, or expressing sincere emotions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact Section -->
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>📧 Email: <a href="/cdn-cgi/l/email-protection#a2c3dbd1c4cecdd5c7d0d1cacdd2e2c5cfc3cbce8cc1cdcf"><span class="__cf_email__" data-cfemail="fe9f878d989291899b8c8d96918ebe99939f9792d09d9193">[email&#160;protected]</span></a></p>
+                <p>📱 Phone: <a href="tel:07056537373983">07056537373983</a></p>
+                <a href="tel:07056537373983" class="contact-link">📞 Call Us Now</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Location</h3>
+                <p>📍 Lagos, Nigeria</p>
+                <p>We deliver fresh flowers to all states in Western Nigeria including Lagos, Ogun, Oyo, Osun, Ondo, and Ekiti.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Business Hours</h3>
+                <p>Monday - Saturday<br>8:00 AM - 7:00 PM</p>
+                <p>Sunday<br>10:00 AM - 4:00 PM</p>
+                <p style="margin-top: 1rem; color: var(--sunshine);">Same-day delivery available for orders placed before 2 PM!</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ay's Valentine Lover's Concept. All rights reserved. Celebrating love through flowers, every single day. 🌸💕</p>
+        </div>
+    </footer>
+</body>
+</html>
